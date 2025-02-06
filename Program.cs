@@ -1,6 +1,9 @@
+using BackReciclaje.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.Configure<BackReciclaje.Repository.ConnectionStrings>(builder.Configuration.GetSection("ConnectionStrings"));
 

@@ -6,5 +6,6 @@ namespace BackReciclaje.Repository
     {
         public bool CreateUser(User user);
         public bool UserExist(string cedula);
+        public UserPuntos Login(UserLogin uLogin);
     }
 }

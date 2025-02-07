@@ -43,6 +43,42 @@ namespace BackReciclaje.Repository
             }
         }
 
+        public List<Ranking> GetTopToRanking()
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionStrings.Db_Connection))
+            {
+                conn.Open();
+
+                string query = @"SELECT TOP 3 U.Cedula, u.NombreUsuario, SUM(p.PuntosObtenidos) AS TotalPuntos FROM UserLog u 
+                                LEFT JOIN Puntos p ON u.Cedula = p.Usuario
+                                GROUP BY U.Cedula, u.NombreUsuario
+                                ORDER BY TotalPuntos DESC";
+
+                List<Ranking> result = new List<Ranking>();
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Ranking user = new Ranking();
+
+                            user.Cedula = reader.IsDBNull(reader.GetOrdinal("Cedula")) ? string.Empty : reader.GetString(reader.GetOrdinal("Cedula"));
+                            user.NombreUsuario = reader.IsDBNull(reader.GetOrdinal("NombreUsuario")) ? string.Empty : reader.GetString(reader.GetOrdinal("NombreUsuario"));
+                            user.TotalPuntos = reader.IsDBNull(reader.GetOrdinal("TotalPuntos")) ? 0 : reader.GetInt32(reader.GetOrdinal("TotalPuntos"));
+
+                            result.Add(user);
+                        }
+                    }
+                }
+
+                conn.Close();
+
+                return result;
+            }
+        }
+
         public UserPuntos Login(UserLogin uLogin)
         {
             using (SqlConnection conn = new SqlConnection(_connectionStrings.Db_Connection))
@@ -79,6 +115,33 @@ namespace BackReciclaje.Repository
 
                     return result;
                 }
+            }
+        }
+
+        public bool SavePoints(Puntos points)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(_connectionStrings.Db_Connection))
+                {
+                    conn.Open();
+
+                    string query = @"INSERT INTO Puntos VALUES (@UsuarioCedula, @CantidadBasura, (@CantidadBasura * 5), GETDATE())";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@UsuarioCedula", points.UsuarioCedula);
+                        cmd.Parameters.AddWithValue("@CantidadBasura", points.CantidadBasura);
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
 

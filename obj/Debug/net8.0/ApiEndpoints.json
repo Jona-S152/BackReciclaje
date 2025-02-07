@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "BackReciclaje.Controllers.UserController",
+    "Method": "GetRanking",
+    "RelativePath": "api/User/GetRanking",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackReciclaje.Controllers.UserController",
     "Method": "Login",
     "RelativePath": "api/User/Login",
     "HttpMethod": "POST",
@@ -32,24 +42,19 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BackReciclaje.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "BackReciclaje.Controllers.UserController",
+    "Method": "SavePoints",
+    "RelativePath": "api/User/SavePoints",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BackReciclaje.WeatherForecast, BackReciclaje, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "points",
+        "Type": "BackReciclaje.Model.Puntos",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
   }
 ]

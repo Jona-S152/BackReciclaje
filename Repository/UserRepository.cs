@@ -1,6 +1,6 @@
 ﻿using BackReciclaje.Model;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
-using System.Data.SqlClient;
 
 namespace BackReciclaje.Repository
 {
@@ -50,7 +50,7 @@ namespace BackReciclaje.Repository
                 conn.Open();
 
                 string query = @"SELECT u.Cedula, u.NombreUsuario, p.* FROM UserLog u 
-                                JOIN Puntos p ON u.Cedula = p.Usuario
+                                LEFT JOIN Puntos p ON u.Cedula = p.Usuario
                                 WHERE Email = @Email AND Contraseña = @Contraseña";
 
                 UserPuntos result = null;

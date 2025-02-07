@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\model\\userpuntos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,8 +46,7 @@
               "RelativeToolTip": "Model\\UserPuntos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T04:14:06.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T04:14:06.16Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "Repository\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T03:56:07.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T03:56:07.385Z"
             },
             {
               "$type": "Document",
@@ -72,25 +70,24 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T04:01:19.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T04:01:19.44Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
               "ToolTip": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Repository\\UserRepository.cs",
               "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEkAAACnAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowBMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T03:56:13.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCEAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T03:49:57.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T03:49:57.909Z"
             }
           ]
         },

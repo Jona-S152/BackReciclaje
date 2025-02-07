@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackReciclaje")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9158e5a311b0d49ba6fc760177199dcd4d90a2fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1421008c9627d71054b4ff19216678dae54a5a1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackReciclaje")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackReciclaje")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

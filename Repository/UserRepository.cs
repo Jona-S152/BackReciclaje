@@ -26,9 +26,9 @@ namespace BackReciclaje.Repository
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Cedula", user.Cedula);
-                        cmd.Parameters.AddWithValue("@NombreCompleto", user.NombreCompleto);
-                        cmd.Parameters.AddWithValue("@Email", user.Email);
-                        cmd.Parameters.AddWithValue("@Telefono", user.Telefono);
+                        cmd.Parameters.AddWithValue("@NombreCompleto", (object)user.NombreCompleto ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Email", (object)user.Email ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Telefono", (object)user.Telefono ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@NombreUsuario", user.NombreUsuario);
                         cmd.Parameters.AddWithValue("@Contraseña", user.Contraseña);
 

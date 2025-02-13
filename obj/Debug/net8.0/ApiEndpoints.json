@@ -19,7 +19,7 @@
     "ContainingType": "BackReciclaje.Controllers.UserController",
     "Method": "GetRanking",
     "RelativePath": "api/User/GetRanking",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],

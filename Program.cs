@@ -2,6 +2,19 @@ using BackReciclaje.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var MyAllowSpecificOrigins = "*";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("http://localhost:4200")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                      });
+});
+
 // Add services to the container.
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 

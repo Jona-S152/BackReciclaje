@@ -47,7 +47,7 @@ namespace BackReciclaje.Controllers
         {
             bool resp = _userRepository.SavePoints(points);
             if (resp) return StatusCode(StatusCodes.Status200OK, new { message = "Puntos registrados con éxito." });
-            else return StatusCode(StatusCodes.Status400BadRequest, new { message = "Ocurrió un error desconocido, intentalo de nuevo más tarde." });
+            else return StatusCode(StatusCodes.Status400BadRequest, new { message = "Error intentalo de nuevo después de 1 minuto." });
         }
     }
 }

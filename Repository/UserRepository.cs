@@ -94,7 +94,7 @@ namespace BackReciclaje.Repository
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Email", uLogin.Email);
-                    cmd.Parameters.AddWithValue("@Contraseña", uLogin.Contraseña);
+                    cmd.Parameters.AddWithValue("@Contraseña", uLogin.Clave);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -126,17 +126,40 @@ namespace BackReciclaje.Repository
                 {
                     conn.Open();
 
-                    string query = @"INSERT INTO Puntos VALUES (@UsuarioCedula, @CantidadBasura, (@CantidadBasura * 5), GETDATE())";
+                    bool isValid = false;
 
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    string queryValidation = @"SELECT
+	                                                CASE 
+		                                                WHEN (DATEPART(MINUTE, GETDATE()) - DATEPART(MINUTE, pp.FechaRegistro)) <= 1
+			                                                THEN CAST(0 AS BIT)
+			                                                ELSE CAST(1 AS BIT)
+		                                                END
+                                                FROM (SELECT TOP 1 p.FechaRegistro FROM Puntos p
+                                                WHERE Usuario = @UsuarioCedula
+                                                ORDER BY p.FechaRegistro DESC) AS pp";
+
+                    using (SqlCommand cmd = new SqlCommand(queryValidation, conn))
                     {
                         cmd.Parameters.AddWithValue("@UsuarioCedula", points.UsuarioCedula);
-                        cmd.Parameters.AddWithValue("@CantidadBasura", points.CantidadBasura);
 
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                        return true;
+                        isValid = (bool)cmd.ExecuteScalar();
                     }
+
+                    if (isValid)
+                    {
+                        string query = @"INSERT INTO Puntos VALUES (@UsuarioCedula, @CantidadBasura, (@CantidadBasura * 5), GETDATE())";
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@UsuarioCedula", points.UsuarioCedula);
+                            cmd.Parameters.AddWithValue("@CantidadBasura", points.CantidadBasura);
+
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                    }
+
+                    return isValid;
                 }
             }
             catch (Exception ex)

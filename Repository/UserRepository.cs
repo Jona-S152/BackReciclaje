@@ -30,7 +30,7 @@ namespace BackReciclaje.Repository
                         cmd.Parameters.AddWithValue("@Email", (object)user.Email ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@Telefono", (object)user.Telefono ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@NombreUsuario", user.NombreUsuario);
-                        cmd.Parameters.AddWithValue("@Contraseña", user.Contraseña);
+                        cmd.Parameters.AddWithValue("@Contraseña", user.Clave);
 
                         cmd.ExecuteNonQuery();
                         conn.Close();

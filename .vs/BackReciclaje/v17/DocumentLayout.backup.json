@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:model\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|e:\\soluciones.net\\proyectoreciclaje\\backreciclaje\\model\\userpuntos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{644EE356-40E1-436B-81AC-EF2F1CC94064}|BackReciclaje.csproj|solutionrelative:model\\userpuntos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -62,12 +62,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T01:03:28.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T01:03:28.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UserLogin.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Model\\UserLogin.cs",
               "RelativeDocumentMoniker": "Model\\UserLogin.cs",
@@ -75,12 +74,11 @@
               "RelativeToolTip": "Model\\UserLogin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T01:00:20.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T01:00:20.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Repository\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IUserRepository.cs",
@@ -88,12 +86,11 @@
               "RelativeToolTip": "Repository\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T02:30:03.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T02:30:03.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Puntos.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Model\\Puntos.cs",
               "RelativeDocumentMoniker": "Model\\Puntos.cs",
@@ -101,12 +98,11 @@
               "RelativeToolTip": "Model\\Puntos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T02:29:07.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T02:29:07.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Ranking.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Model\\Ranking.cs",
               "RelativeDocumentMoniker": "Model\\Ranking.cs",
@@ -114,18 +110,17 @@
               "RelativeToolTip": "Model\\Ranking.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T02:07:58.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T02:07:58.333Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Model\\User.cs",
               "RelativeDocumentMoniker": "Model\\User.cs",
               "ToolTip": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Model\\User.cs",
               "RelativeToolTip": "Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T01:43:32.697Z",
               "EditorCaption": ""
@@ -150,14 +145,14 @@
               "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
               "ToolTip": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Repository\\UserRepository.cs",
               "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAYwI8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCAAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T03:56:13.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\Soluciones.NET\\ProyectoReciclaje\\BackReciclaje\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -165,8 +160,7 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAewDEAAACCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T03:49:57.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T03:49:57.909Z"
             }
           ]
         },

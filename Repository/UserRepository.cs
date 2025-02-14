@@ -120,51 +120,54 @@ namespace BackReciclaje.Repository
 
         public bool SavePoints(Puntos points)
         {
-            try
+            using (SqlConnection conn = new SqlConnection(_connectionStrings.Db_Connection))
             {
-                using (SqlConnection conn = new SqlConnection(_connectionStrings.Db_Connection))
+                conn.Open();
+                string query = @"IF NOT EXISTS (SELECT 1 FROM UserLog WHERE Cedula = @UsuarioCedula)
+                                            BEGIN
+	                                            RAISERROR ('El usuario con cédula %s no se encuentra registrado.', 16, 1, @UsuarioCedula);
+                                                RETURN;
+                                            END
+
+                                            IF NOT EXISTS (SELECT 1 FROM Puntos WHERE Usuario = @UsuarioCedula)
+                                            BEGIN
+                                                INSERT INTO Puntos VALUES (@UsuarioCedula, @CantidadBasura, (@CantidadBasura * 5), GETDATE())
+                                            END
+                                            ELSE
+                                            BEGIN
+	                                            IF (
+		                                            SELECT 
+			                                            CASE 
+				                                            WHEN DATEPART(MINUTE, GETDATE() - pp.FechaRegistro) > 0
+					                                            THEN CAST(1 AS BIT)
+					                                            ELSE CAST(0 AS BIT)
+			                                            END
+		                                            FROM (
+			                                            SELECT TOP 1 p.FechaRegistro, p.Usuario 
+			                                            FROM Puntos p
+			                                            WHERE Usuario = @UsuarioCedula
+			                                            ORDER BY p.FechaRegistro DESC
+		                                            ) AS pp) = 1
+		                                            BEGIN
+			                                            INSERT INTO Puntos VALUES (@UsuarioCedula, @CantidadBasura, (@CantidadBasura * 5), GETDATE())
+		                                            END
+	                                            ELSE
+		                                            BEGIN
+			                                            RAISERROR ('Error intentalo de nuevo después de 1 minuto.', 16, 1);
+			                                            RETURN;
+		                                            END
+                                            END";
+                
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    conn.Open();
+                    cmd.Parameters.AddWithValue("@UsuarioCedula", points.UsuarioCedula);
+                    cmd.Parameters.AddWithValue("@CantidadBasura", points.CantidadBasura);
 
-                    bool isValid = false;
-
-                    string queryValidation = @"SELECT 
-	                                                CASE 
-		                                                WHEN DATEPART(MINUTE, GETDATE() - pp.FechaRegistro) < 1
-			                                                THEN CAST(0 AS BIT)
-			                                                ELSE CAST(1 AS BIT)
-		                                                END
-                                                FROM (SELECT TOP 1 p.FechaRegistro FROM Puntos p
-                                                WHERE Usuario = @UsuarioCedula
-                                                ORDER BY p.FechaRegistro DESC) AS pp";
-
-                    using (SqlCommand cmd = new SqlCommand(queryValidation, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@UsuarioCedula", points.UsuarioCedula);
-
-                        isValid = (bool)cmd.ExecuteScalar();
-                    }
-
-                    if (isValid)
-                    {
-                        string query = @"INSERT INTO Puntos VALUES (@UsuarioCedula, @CantidadBasura, (@CantidadBasura * 5), GETDATE())";
-
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@UsuarioCedula", points.UsuarioCedula);
-                            cmd.Parameters.AddWithValue("@CantidadBasura", points.CantidadBasura);
-
-                            cmd.ExecuteNonQuery();
-                            conn.Close();
-                        }
-                    }
-
-                    return isValid;
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
                 }
-            }
-            catch (Exception ex)
-            {
-                return false;
+
+                return true;
             }
         }
 

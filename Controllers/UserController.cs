@@ -45,9 +45,16 @@ namespace BackReciclaje.Controllers
         [HttpPost("SavePoints")]
         public IActionResult SavePoints(Puntos points)
         {
-            bool resp = _userRepository.SavePoints(points);
-            if (resp) return StatusCode(StatusCodes.Status200OK, new { message = "Puntos registrados con éxito." });
-            else return StatusCode(StatusCodes.Status400BadRequest, new { message = "Error intentalo de nuevo después de 1 minuto." });
+            try
+            {
+                bool resp = _userRepository.SavePoints(points);
+                if (resp) return StatusCode(StatusCodes.Status200OK, new { message = "Puntos registrados con éxito." });
+                else return StatusCode(StatusCodes.Status400BadRequest, new { message = "Error intentalo de nuevo después de 1 minuto." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, new { message = ex.Message });
+            }
         }
     }
 }

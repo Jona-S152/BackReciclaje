@@ -128,9 +128,9 @@ namespace BackReciclaje.Repository
 
                     bool isValid = false;
 
-                    string queryValidation = @"SELECT
+                    string queryValidation = @"SELECT 
 	                                                CASE 
-		                                                WHEN (DATEPART(MINUTE, GETDATE()) - DATEPART(MINUTE, pp.FechaRegistro)) <= 1
+		                                                WHEN DATEPART(MINUTE, GETDATE() - pp.FechaRegistro) < 1
 			                                                THEN CAST(0 AS BIT)
 			                                                ELSE CAST(1 AS BIT)
 		                                                END
